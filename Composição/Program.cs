@@ -1,4 +1,6 @@
 ﻿using System;
+using Composição.Entities;
+using Composição.Entities.Enums;
 
 namespace Composição
 {
@@ -6,7 +8,15 @@ namespace Composição
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+
+            };
+            Console.WriteLine(order);
+
         }
     }
 }
